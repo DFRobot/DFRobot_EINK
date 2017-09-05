@@ -86,4 +86,4 @@ InkScreen_Error rectangleFILL(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2
 
 ## Credits
 
-Written by DFRobot_xiaowo, 2017. (Welcome to our [website](https://www.dfrobot.com/))
+Written by DFRobot_lixin, 2017. (Welcome to our [website](https://www.dfrobot.com/))

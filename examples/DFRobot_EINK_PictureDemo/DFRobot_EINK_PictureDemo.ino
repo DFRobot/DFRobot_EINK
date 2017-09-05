@@ -377,22 +377,24 @@ const unsigned char  DFRobot_red[] =
 0X00,0X00,0X00,0X00,
 };
 
-void setup(void){
-  Serial.begin(115200);
-  //Select the corresponding pins
-  eink.begin(EINK_CS, Font_CS, EINK_DC);
-  //Clear the screen and display white
-  eink.clear(WHITE);
+void setup(void)
+{
+    Serial.begin(115200);
+    //Select the corresponding pins
+    eink.begin(EINK_CS, Font_CS, EINK_DC);
+    //Clear the screen and display white
+    eink.clear(WHITE);
 }
 
-void loop(void){
-	//Show a picture
-	eink.picDisplay(DFRobot_bw, DFRobot_red);
-	//Refresh screen display
+void loop(void)
+{
+    //Show a picture
+    eink.picDisplay(DFRobot_bw, DFRobot_red);
+    //Refresh screen display
     eink.disRefresh();
-	delay(3000);
-	
-	//Clear the screen and display white
+    delay(3000);
+    
+    //Clear the screen and display white
     eink.clear(WHITE);
 }
 

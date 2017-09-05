@@ -45,45 +45,45 @@ typedef bool InkScreen_Error;
 
 //eINK important parameters 
 typedef struct{
-	uint16_t highly;
-	uint16_t width;
-	uint8_t scandir;
+    uint16_t highly;
+    uint16_t width;
+    uint8_t scandir;
 }eInk_dev;
 extern eInk_dev eInkdev;
 
 class InkScreenBWR
 {
 public:
-	InkScreenBWR();
-	~InkScreenBWR();
-	void begin(const char cs_W21, const char cs_GT30, const char dc);
-	void picDisplay(const unsigned char *pic_bw, const unsigned char *pic_red);
-	void disRefresh();
-	void disStr(uint8_t x, uint8_t y, char *ch, uint8_t color);
-	uint8_t character_type = CHARACTER_TYPE_UTF8;
-	InkScreen_Error clear(uint8_t color);
-	InkScreen_Error drawPoint(const unsigned char x, const unsigned char y, const unsigned char color);
-	InkScreen_Error drawLine(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t color);
-	InkScreen_Error drawRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t color);
-	InkScreen_Error drawCircle(uint16_t xc, uint16_t yc, uint16_t r, uint16_t fill, uint8_t color);
-	InkScreen_Error rectangleFILL(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t color);
+    InkScreenBWR();
+    ~InkScreenBWR();
+    void begin(const char cs_W21, const char cs_GT30, const char dc);
+    void picDisplay(const unsigned char *pic_bw, const unsigned char *pic_red);
+    void disRefresh();
+    void disStr(uint8_t x, uint8_t y, char *ch, uint8_t color);
+    uint8_t character_type = CHARACTER_TYPE_UTF8;
+    InkScreen_Error clear(uint8_t color);
+    InkScreen_Error drawPoint(const unsigned char x, const unsigned char y, const unsigned char color);
+    InkScreen_Error drawLine(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t color);
+    InkScreen_Error drawRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t color);
+    InkScreen_Error drawCircle(uint16_t xc, uint16_t yc, uint16_t r, uint16_t fill, uint8_t color);
+    InkScreen_Error rectangleFILL(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t color);
 private:
-	void spiDelay(unsigned char xsp);
-	void spiRead(uint32_t addr, uint8_t len, char *ch);
-	void spiWriteByte(unsigned char value);
-	void wirteCmd(unsigned char command);
-	void wirteData(unsigned char data);
-	void setWindow(uint16_t x, uint16_t y);
-	void powerOn(void);
-	void powerOff(void);
-	uint32_t GB2312_addr(char *ch, uint8_t type);
-	InkScreen_Error showStr(uint8_t x, uint8_t y, uint8_t size, char *ch, uint8_t color);
-	InkScreen_Error getLattice(char *gb2312, uint8_t size, char *ch2);
-	InkScreen_Error unicodeToGB2312(char *unicode, char *GB2312);
-	InkScreen_Error drawCirclePoint( uint16_t xc, uint16_t yc, uint16_t x, uint16_t y,  uint8_t color);
-	uint8_t DFR_W21_CS;
-	uint8_t DFR_W21_DC;	
-	uint8_t DFR_GT30_CS;
+    void spiDelay(unsigned char xsp);
+    void spiRead(uint32_t addr, uint8_t len, char *ch);
+    void spiWriteByte(unsigned char value);
+    void wirteCmd(unsigned char command);
+    void wirteData(unsigned char data);
+    void setWindow(uint16_t x, uint16_t y);
+    void powerOn(void);
+    void powerOff(void);
+    uint32_t GB2312_addr(char *ch, uint8_t type);
+    InkScreen_Error showStr(uint8_t x, uint8_t y, uint8_t size, char *ch, uint8_t color);
+    InkScreen_Error getLattice(char *gb2312, uint8_t size, char *ch2);
+    InkScreen_Error unicodeToGB2312(char *unicode, char *GB2312);
+    InkScreen_Error drawCirclePoint( uint16_t xc, uint16_t yc, uint16_t x, uint16_t y,  uint8_t color);
+    uint8_t DFR_W21_CS;
+    uint8_t DFR_W21_DC;
+    uint8_t DFR_GT30_CS;
 };
 
 #endif

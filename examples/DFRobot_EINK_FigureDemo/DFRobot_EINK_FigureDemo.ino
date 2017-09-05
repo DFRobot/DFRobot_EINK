@@ -44,35 +44,38 @@ InkScreenBWR eink;
 #define EINK_DC  5
 #define Font_CS  4
 
-void setup(void){
-  Serial.begin(115200);
-  //Select the corresponding pins
-  eink.begin(EINK_CS, Font_CS, EINK_DC);
-  //Clear the screen and display white
-  eink.clear(WHITE);
+void setup(void)
+{
+    Serial.begin(115200);
+    //Select the corresponding pins
+    eink.begin(EINK_CS, Font_CS, EINK_DC);
+    //Clear the screen and display white
+    eink.clear(WHITE);
 }
 
-void loop(void){
-  //Let me draw a red dot
-  for(uint8_t x=12,y=12; y<92; y+=2){
-	 eink.drawPoint(x,y,RED);
-  }
-  //Draw two lines
-  eink.drawLine(24,12,36,92,RED);
-  eink.drawLine(36,12,24,92,RED);
-  //Draw a red rectangle
-  eink.drawRectangle(48,12,98,92,RED);
-  //Fill a rectangle with black
-  eink.rectangleFILL(55,19,91,85,BLACK);
-  //Draw a hollow circle
-  eink.drawCircle(160,51,40,0,RED);
-  //Draw a solid circle
-  eink.drawCircle(160,51,30,1,BLACK);
-  //Refresh screen display
-  eink.disRefresh();
-  delay(3000);
-  //Clear the screen and display white
-  eink.clear(WHITE);
+void loop(void)
+{
+    //Let me draw a red dot
+    for(uint8_t x=12,y=12; y<92; y+=2)
+    {
+        eink.drawPoint(x,y,RED);
+    }
+    //Draw two lines
+    eink.drawLine(24,12,36,92,RED);
+    eink.drawLine(36,12,24,92,RED);
+    //Draw a red rectangle
+    eink.drawRectangle(48,12,98,92,RED);
+    //Fill a rectangle with black
+    eink.rectangleFILL(55,19,91,85,BLACK);
+    //Draw a hollow circle
+    eink.drawCircle(160,51,40,0,RED);
+    //Draw a solid circle
+    eink.drawCircle(160,51,30,1,BLACK);
+    //Refresh screen display
+    eink.disRefresh();
+    delay(3000);
+    //Clear the screen and display white
+    eink.clear(WHITE);
 }
 
 
