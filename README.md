@@ -29,9 +29,9 @@ To use the library to download the zip file, unzip it into a folder named DFRobo
 
 //Select the corresponding pins
 void begin(const char cs_W21, const char cs_GT30, const char dc);
- *cs_W21:   EINK Piece of selected pin
- *cs_GT30:  FONT Piece of selected pin
- *dc:       DC Control pin
+   *cs_W21:   EINK Piece of selected pin
+   *cs_GT30:  FONT Piece of selected pin
+   *dc:       DC Control pin
 
 //Clear the screen(BLACK or WHITE or RED)
 InkScreen_Error clear(uint8_t color);
