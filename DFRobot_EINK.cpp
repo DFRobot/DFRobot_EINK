@@ -307,7 +307,7 @@ InkScreen_Error InkScreenBWR::drawRectangle(uint16_t x1, uint16_t y1, uint16_t x
     return Status;
 }
 
-InkScreen_Error InkScreenBWR::rectangleFILL(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t color)
+InkScreen_Error InkScreenBWR::rectangleFill(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t color)
 {
     InkScreen_Error Status = true;
     uint8_t sx=x1,sy=y1;
@@ -463,7 +463,7 @@ void InkScreenBWR::disStr(uint8_t x, uint8_t y, char *ch, uint8_t color)
 InkScreen_Error InkScreenBWR::getLattice(char *gb2312, uint8_t size, char *ch2)
 {
     if(size == CHINESE_TYPE_1616){//Get 16 * 16 Chinese font
-        uint32_t addr = GB2312_addr(gb2312, JFLS1516HZ_ADDR);
+        uint32_t addr = GB2312_addr(gb2312, CHINESE_TYPE_1616);
         spiRead(addr, 32, ch2);
     }else if(size == CHARACTER_TYPE_16){//Gets 8 * 16ASCII character font
         uint32_t addr = GB2312_addr(gb2312, CHARACTER_TYPE_16);
