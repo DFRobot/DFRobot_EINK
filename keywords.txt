@@ -7,9 +7,6 @@
 #######################################
 
 InkScreenBWR	KEYWORD1
-WHITE	KEYWORD1
-RED	KEYWORD1
-BLACK	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -29,3 +26,8 @@ rectangleFILL	KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################
+
+LUCENCY	LITERAL1
+WHITE	LITERAL1
+RED	LITERAL1
+BLACK	LITERAL1
