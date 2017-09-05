@@ -1,7 +1,5 @@
 # EINK 
 
--------------------------------------------------------------------
-
 Provide an Arduino library to control the e-ink screen display, via SPI communication
 
 ## Table of Contents
