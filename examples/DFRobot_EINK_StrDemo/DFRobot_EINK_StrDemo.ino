@@ -8,7 +8,7 @@
 //RED------->red
 /*****************Function instruction*****************/
 //InkScreen_Error clear(uint8_t color)
-  //*This function clears the screen
+  //*This function is used to clear the screen
   //*color: BLACK or WHITE or RED
 //disStr(uint8_t x, uint8_t y, char *ch, uint8_t color)
   //*This function is used to display Chinese and English strings

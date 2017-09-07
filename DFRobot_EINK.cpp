@@ -165,7 +165,7 @@ void DFRobot_EINKBWR::powerOn(void)
     wirteData(0x17);
     wirteData(0x17);
     wirteCmd(0x04);//Access to electricity
-    delay(3000);//Waiting for bus idle
+    delay(3000);//Wait for bus idle
     wirteCmd(0X00);//Set sweeping direction
     wirteData(0xc3|eInkdev.scandir);
     wirteCmd(0X50);
@@ -185,7 +185,7 @@ void DFRobot_EINKBWR::powerOff(void)
     wirteCmd(0x82);//to solve Vcom drop
     wirteData(0x00);
     wirteCmd(0x01);//power setting
-    wirteData(0x02);//gate switch to external
+    wirteData(0x02);
     wirteData(0x00);
     wirteData(0x00);
     wirteData(0x00);

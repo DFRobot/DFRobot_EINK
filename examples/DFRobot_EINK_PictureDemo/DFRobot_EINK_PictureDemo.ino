@@ -8,7 +8,7 @@
 //RED------->red
 /*****************Function instruction*****************/
 //InkScreen_Error clear(uint8_t color)
-  //*This function clears the screen
+  //*This function is used to clear the screen
   //*color: BLACK or WHITE or RED
 //picDisplay(const unsigned char *pic_bw, const unsigned char *pic_red)
   //*This function is used to draw points

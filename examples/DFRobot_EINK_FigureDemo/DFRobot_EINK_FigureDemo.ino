@@ -8,14 +8,14 @@
 //RED------->red
 /*****************Function instruction*****************/
 //InkScreen_Error clear(uint8_t color)
-  //*This function clears the screen
+  //*This function is used to clear the screen
   //*color: BLACK or WHITE or RED
 //drawPoint(const unsigned char x, const unsigned char y, const unsigned char color)
   //*This function is used to draw points
   //*(x,y):  coordinate (x∈(0,211),y∈(0,103)
   //*color:  BLACK or WHITE or RED
 //drawLine(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t color)
-  //*This function is used to draw line  
+  //*This function is used to draw lines
   //*[(x1,y1),(x2,y2)]:  The endpoint coordinates (x1/x2∈(0,211),y1/y2∈(0,103))
   //*color:              BLACK or WHITE or RED
 //drawRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2, uint8_t color)
