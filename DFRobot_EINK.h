@@ -22,11 +22,12 @@
 #define ASC0812M2ZF_ADDR      ((uint32_t)0x066d40)//6*12 ASCII base address
 #define GBEX0816ZF_ADDR       ((uint32_t)0x27BFAA)//8*16 ASCII base address
 #define JFLS1516HZ_ADDR       ((uint32_t)0x21E72C)//16*16 chinese base address
+#define JFLS1516HZBD_ADDR     ((uint32_t)0x22242C)//16*16 chinese punctuation base address
 //scan_direction
-#define EInk_scan_Dir1        ((uint8_t)2<<2)//From left to right, top to bottom
-#define EInk_scan_Dir2        ((uint8_t)0<<2)//From left to right, down to the top
-#define EInk_scan_Dir3        ((uint8_t)3<<2)//From right to left, top to bottom
-#define EInk_scan_Dir4        ((uint8_t)1<<2)//From right to left, down to top
+#define EINK_SCAN_DIR1        ((uint8_t)2<<2)//From left to right, top to bottom
+#define EINK_SCAN_DIR2        ((uint8_t)0<<2)//From left to right, down to the top
+#define EINK_SCAN_DIR3        ((uint8_t)3<<2)//From right to left, top to bottom
+#define EINK_SCAN_DIR4        ((uint8_t)1<<2)//From right to left, down to top
 //The_font_size
 #define   CHARACTER_TYPE_8    0//7*8 ASCII
 #define   CHARACTER_TYPE_12   1//6*12 ASCII
@@ -35,6 +36,7 @@
 //The_input_type
 #define CHARACTER_TYPE_UNICODE 0
 #define CHARACTER_TYPE_UTF8    1
+#define CHARACTER_TYPE_GB2312  2
 //color
 #define LUCENCY  0
 #define WHITE    1
@@ -51,11 +53,11 @@ typedef struct{
 }eInk_dev;
 extern eInk_dev eInkdev;
 
-class InkScreenBWR
+class DFRobot_EINKBWR
 {
 public:
-    InkScreenBWR();
-    ~InkScreenBWR();
+    DFRobot_EINKBWR();
+    ~DFRobot_EINKBWR();
     void begin(const char cs_W21, const char cs_GT30, const char dc);
     void picDisplay(const unsigned char *pic_bw, const unsigned char *pic_red);
     void disRefresh();

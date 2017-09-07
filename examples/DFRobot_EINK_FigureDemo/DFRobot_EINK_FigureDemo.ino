@@ -38,7 +38,7 @@
 //disRefresh()
   //*This function is used to refresh the screen display
   
-InkScreenBWR eink;
+DFRobot_EINKBWR eink;
 
 #define EINK_CS  2
 #define EINK_DC  5

@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-InkScreenBWR	KEYWORD1
+DFRobot_EINKBWR	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
