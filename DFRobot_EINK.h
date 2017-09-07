@@ -29,10 +29,10 @@
 #define EINK_SCAN_DIR3        ((uint8_t)3<<2)//From right to left, top to bottom
 #define EINK_SCAN_DIR4        ((uint8_t)1<<2)//From right to left, down to top
 //The_font_size
-#define   CHARACTER_TYPE_8    0//7*8 ASCII
-#define   CHARACTER_TYPE_12   1//6*12 ASCII
-#define   CHARACTER_TYPE_16   2//8*16 ASCII
-#define   CHINESE_TYPE_1616   3//16*16 Chinese  
+#define CHARACTER_TYPE_8    0//7*8 ASCII
+#define CHARACTER_TYPE_12   1//6*12 ASCII
+#define CHARACTER_TYPE_16   2//8*16 ASCII
+#define CHINESE_TYPE_1616   3//16*16 Chinese  
 //The_input_type
 #define CHARACTER_TYPE_UNICODE 0
 #define CHARACTER_TYPE_UTF8    1
